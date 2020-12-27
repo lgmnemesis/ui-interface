@@ -1,5 +1,4 @@
 import { createContext } from 'react'
-import { GlobalContext } from './useGlobalState'
-const Context = createContext<GlobalContext>(undefined!)
+import { GlobalContextType } from './useGlobalState'
 
-export default Context
+export const StoreContext = createContext<GlobalContextType>(undefined!)

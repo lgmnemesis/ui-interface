@@ -8,7 +8,7 @@ export interface GlobalState {
   isDarkMode?: boolean
 }
 
-export type GlobalContext = {
+export type GlobalContextType = {
   globalState: GlobalState
   globalDispatch: React.Dispatch<GlobalAction>
 }

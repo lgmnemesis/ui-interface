@@ -1,11 +1,11 @@
 import useGlobalState from './useGlobalState'
-import Context from './context'
+import { StoreContext } from './context'
 
 const GlobalStateProvider = ({ children }: any) => {
   return  (
-    <Context.Provider value={useGlobalState()}>
+    <StoreContext.Provider value={useGlobalState()}>
       {children}
-    </Context.Provider>
+    </StoreContext.Provider>
   )
 }
 
