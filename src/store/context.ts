@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-
-const Context: any = createContext({})
+import { GlobalContext } from './useGlobalState'
+const Context = createContext<GlobalContext>(undefined!)
 
 export default Context

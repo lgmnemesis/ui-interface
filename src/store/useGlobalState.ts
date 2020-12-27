@@ -1,11 +1,19 @@
 import { useReducer } from 'react'
 
-interface GlobalAction {
-  type: string
-  isDarkMode: boolean
+export interface GlobalAction extends GlobalState {
+  type?: 'DARK_MODE'
 }
 
-const reducer = (state: any, action: GlobalAction) => {
+export interface GlobalState {
+  isDarkMode?: boolean
+}
+
+export type GlobalContext = {
+  globalState: GlobalState
+  globalDispatch: React.Dispatch<GlobalAction>
+}
+
+const reducer = (state: GlobalState, action: GlobalAction) => {
   switch (action.type) {
     case 'DARK_MODE':
       return {
@@ -16,8 +24,7 @@ const reducer = (state: any, action: GlobalAction) => {
   }
 }
 
-const initialState: GlobalAction = {
-  type: '',
+const initialState: GlobalState = {
   isDarkMode: true
 }
 
