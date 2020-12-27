@@ -35,6 +35,9 @@ export const theme = (darkMode: boolean): DefaultTheme => {
     //primary colors
     primary1: darkMode ? '#2172E5' : '#ff007a',
 
+    // Others
+    blue1: '#2172E5',
+
     mediaWidth: mediaWidthTemplates,
 
     // css snippets

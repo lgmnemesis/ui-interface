@@ -14,6 +14,9 @@ export interface Colors {
   text5: Color
 
   primary1: color
+
+  // other
+  blue1: Color
 }
 
 declare module 'styled-components' {

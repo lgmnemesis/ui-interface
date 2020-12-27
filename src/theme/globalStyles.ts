@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import { transparentize } from 'polished'
+import { theme } from './index'
 
 export const GlobalStyles = createGlobalStyle`
   html, input, textarea, button {
@@ -37,5 +38,17 @@ export const GlobalStyles = createGlobalStyle`
         1,
         theme.bg1
       )} 100%)`};
+  }
+
+  a {
+    color: ${theme(false).blue1}; 
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  button {
+    user-select: none;
   }
 `

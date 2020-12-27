@@ -4,6 +4,8 @@ import GlobalStateProvider from './store/GlobalStateProvider';
 import ThemeProviderContainer from './theme/ThemeProviderContainer';
 import { GlobalStyles } from './theme/globalStyles'
 import { HashRouter } from 'react-router-dom'
+import 'inter-ui'
+import './i18n'
 import App from './pages/App'
 
 ReactDOM.render(
