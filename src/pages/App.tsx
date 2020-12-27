@@ -1,7 +1,7 @@
 
 import { Suspense } from 'react'
 import styled from 'styled-components'
-import { ToggleDarkModeButton } from '../components'
+import { ToggleDarkModeButton, Header } from '../components'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -44,9 +44,7 @@ export default function App() {
     <Suspense fallback={null}>
       <AppWrapper>
         <HeaderWrapper>
-          <div className="mosheclass">
-            <p>moshe456</p>
-          </div>
+          <Header />
         </HeaderWrapper>
         <BodyWrapper>
           <p>moshe bosy</p>
