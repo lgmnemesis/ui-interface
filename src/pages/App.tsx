@@ -1,7 +1,7 @@
 
 import { Suspense } from 'react'
 import styled from 'styled-components'
-import { ToggleDarkModeButton } from '../components/ToggleDarkModeButton'
+import { ToggleDarkModeButton } from '../components'
 
 const AppWrapper = styled.div`
   display: flex;
