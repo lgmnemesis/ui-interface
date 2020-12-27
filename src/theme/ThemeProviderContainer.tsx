@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { lightTheme, darkTheme } from './index';
+import { theme } from './index';
 import { StoreContext } from '../store/context'
 import { IS_DARK_MODE } from '../constants'
 
@@ -24,7 +24,7 @@ const ThemeProviderContainer = ({ children }: any) => {
   if (!darkModeIndicator) return <div></div>
 
   return (
-    <ThemeProvider theme={globalState.isDarkMode ? darkTheme : lightTheme}>
+    <ThemeProvider theme={theme(globalState.isDarkMode ?? false)}>
       {children}
     </ThemeProvider>
   )
