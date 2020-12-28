@@ -83,6 +83,17 @@ export const Title = styled.a`
   }
 `
 
+export const AppIcon = styled.div`
+  transition: transform 0.3s ease;
+  :hover {
+    transform: rotate(-5deg);
+  };
+
+  & img {
+    border-radius: 5px;
+  }
+`
+
 export const HeaderLinks = styled(Row)`
   justify-content: center;
   ${({ theme }) => theme.mediaWidth.upToMedium`

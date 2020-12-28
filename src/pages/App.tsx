@@ -1,7 +1,11 @@
 
 import { Suspense } from 'react'
 import styled from 'styled-components'
+import { Route, Switch } from 'react-router-dom'
 import { ToggleDarkModeButton, Header } from '../components'
+import Home from './Home'
+import Explore from './Explore'
+import { RedirectPathToHome } from './redirects'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -47,9 +51,13 @@ export default function App() {
           <Header />
         </HeaderWrapper>
         <BodyWrapper>
-          <p>moshe bosy</p>
-          <ToggleDarkModeButton />
+          <Switch>
+            <Route exact strict path="/home" component={Home} />
+            <Route exact strict path="/explore" component={Explore} />
+            <Route component={RedirectPathToHome} />
+          </Switch>
           <Marginer />
+          <ToggleDarkModeButton />
         </BodyWrapper>
       </AppWrapper>
     </Suspense>
