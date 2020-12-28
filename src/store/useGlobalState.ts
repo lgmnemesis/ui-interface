@@ -17,15 +17,15 @@ export type GlobalContextType = {
   globalDispatch: React.Dispatch<GlobalAction>
 }
 
-const reducer = (state: GlobalState, action: GlobalAction): GlobalState => {
+function reducer(state: GlobalState, action: GlobalAction): GlobalState {
   switch (action.type) {
     case 'ENABLE_DARK_MODE':
-      return setDarkMode(true)
+      return { ...state, ...setDarkMode(true) }
     case 'DISABLE_DARK_MODE':
-      return setDarkMode(false)
+      return { ...state, ...setDarkMode(false) }
     case 'TOGGLE_DARK_MODE':
       const isDarkMode = !state?.isDarkMode ?? false
-      return setDarkMode(isDarkMode)
+      return { ...state, ...setDarkMode(isDarkMode) }
     default:
       return state
   }
@@ -35,7 +35,7 @@ const initialState: GlobalState = {
   isDarkMode: true
 }
 
-const setDarkMode = (isDarkMode: boolean) => {
+function setDarkMode(isDarkMode: boolean): { isDarkMode: boolean}  {
   try {
     window.localStorage.setItem(IS_DARK_MODE, String(isDarkMode))
   } catch (error) {
@@ -46,9 +46,9 @@ const setDarkMode = (isDarkMode: boolean) => {
   }
 }
 
-const useGlobalState = () => {
+function useGlobalState() {
   const [globalState, globalDispatch] = useReducer(reducer, initialState)
-  return {globalState, globalDispatch}
+  return { globalState, globalDispatch }
 }
 
 export default useGlobalState
