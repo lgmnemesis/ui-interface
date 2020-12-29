@@ -3,7 +3,17 @@ import { useTranslation } from 'react-i18next'
 import {StoreContext} from '../../store/context'
 import Logo from '../../assets/images/logo.png'
 import LogoDark from '../../assets/images/logo_dark.png'
-import {HeaderFrame, HeaderRow, Title, AppIcon, HeaderLinks, StyledNavLink} from './styles'
+import {
+  HeaderFrame, 
+  HeaderRow, 
+  Title, 
+  AppIcon, 
+  HeaderLinks, 
+  StyledNavLink,
+  HeaderControls,
+  HeaderElement,
+  HeaderElementWrap
+} from './styles'
 
 export const Header = () => {
   const { t } = useTranslation()
@@ -28,6 +38,14 @@ export const Header = () => {
             </StyledNavLink>
           </HeaderLinks>
         </HeaderRow>
+        <HeaderControls>
+          <HeaderElement>
+
+          </HeaderElement>
+          <HeaderElementWrap>
+            
+          </HeaderElementWrap>
+        </HeaderControls>
       </HeaderFrame>
     )
 }

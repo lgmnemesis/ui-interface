@@ -63,6 +63,11 @@ export const HeaderElement = styled.div`
   `};
 `
 
+export const HeaderElementWrap = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 export const HeaderRow = styled(RowFixed)`
   ${({ theme }) => theme.mediaWidth.upToMedium`
    width: 100%;
