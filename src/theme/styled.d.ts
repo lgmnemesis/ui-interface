@@ -5,6 +5,9 @@ export interface Colors {
   // backgrounds
   bg1: Color
   bg2: Color
+  bg3: Color
+  bg4: Color
+  bg5: Color
 
   // text
   text1: Color
