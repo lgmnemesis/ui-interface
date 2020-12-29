@@ -1,6 +1,7 @@
 
 import { Suspense } from 'react'
-import styled from 'styled-components'
+// the added /macro is for styled component naming debugging in dev tools
+import styled from 'styled-components/macro' 
 import { Route, Switch } from 'react-router-dom'
 import { ToggleDarkModeButton, Header } from '../components'
 import Home from './Home'
